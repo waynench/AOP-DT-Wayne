@@ -1,0 +1,216 @@
+
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#481b2a">
+
+  <title>Login | OSIS SMP/A LSS</title>
+  <link rel="icon" type="image/png" href="logo-laurensia.png">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=DM+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="login.css">
+</head>
+
+<body>
+  <main class="login-page">
+
+    <div class="ornament one"></div>
+    <div class="ornament two"></div>
+    <span class="gold-star star-one">✦</span>
+    <span class="gold-star star-two">✧</span>
+    <span class="gold-star star-three">✦</span>
+
+    <!-- LEFT SIDE -->
+    <section class="login-visual">
+
+      <div class="brand">
+        <div class="brand-logos">
+          <img src="logo-osis.png" alt="Logo OSIS">
+          <img src="logo-laurensia.png" alt="Logo Santa Laurensia">
+        </div>
+
+        <div class="brand-text">
+          <h2>OSIS SMP/A LSS</h2>
+          <p>SANTA LAURENSIA · SUVARNA SUTERA</p>
+        </div>
+      </div>
+
+      <div class="visual-content">
+        <p class="eyebrow">Official Election Website · 2027</p>
+
+        <h1>
+          Lead the<br>
+          <span>Legacy.</span>
+        </h1>
+
+        <p>
+          Welcome to the official OSIS Election 2027 website
+          of Santa Laurensia Suvarna Sutera. Discover the candidates,
+          explore their visions, and be part of a new chapter
+          in our community.
+        </p>
+
+        <div class="visual-divider"></div>
+
+        <p class="visual-quote">
+          "Great leadership begins with the courage to make a difference."
+        </p>
+      </div>
+
+      <div class="visual-footer">
+        <span>SANTA LAURENSIA · SUVARNA SUTERA</span>
+        <span>EST. 2020</span>
+      </div>
+
+    </section>
+
+    <!-- RIGHT SIDE -->
+    <section class="login-panel">
+
+      <div class="login-box">
+
+        <div class="login-top-decoration">✦</div>
+
+        <p class="eyebrow">Welcome Back</p>
+        <h2>Sign In.</h2>
+
+        <p class="login-description">
+          Enter your credentials to access the official
+          OSIS Election 2027 website.
+        </p>
+
+        <form id="loginForm">
+
+          <div class="form-group">
+            <label for="username">USERNAME</label>
+
+            <div class="input-wrap">
+              <input
+                type="text"
+                id="username"
+                name="username"
+                placeholder="Enter your username"
+                autocomplete="username"
+                required
+              >
+            </div>
+          </div>
+
+          <div class="form-group">
+            <label for="password">PASSWORD</label>
+
+            <div class="input-wrap">
+              <input
+                type="password"
+                id="password"
+                name="password"
+                placeholder="Enter your password"
+                autocomplete="current-password"
+                required
+              >
+
+              <button
+                type="button"
+                class="password-toggle"
+                id="togglePassword"
+              >SHOW</button>
+            </div>
+          </div>
+
+          <button class="login-submit" type="submit" id="submitButton">
+            Sign In &nbsp; →
+          </button>
+
+          <p class="login-status" id="loginStatus" aria-live="polite"></p>
+
+        </form>
+
+        <div class="login-help">
+          <p>
+            Don't have an account?<br>
+            Please contact the OSIS administrator to request access.
+          </p>
+
+          <a href="mailto:">Contact the administrator →</a>
+        </div>
+
+        <p class="login-copyright">
+          © 2026 OSIS SMP/A SANTA LAURENSIA · ALL RIGHTS RESERVED
+        </p>
+
+      </div>
+
+    </section>
+
+  </main>
+
+  <script>
+    const loginForm = document.getElementById("loginForm");
+    const loginStatus = document.getElementById("loginStatus");
+    const submitButton = document.getElementById("submitButton");
+
+    const togglePassword = document.getElementById("togglePassword");
+    const passwordInput = document.getElementById("password");
+
+    // Show / hide password
+    togglePassword.addEventListener("click", function () {
+      const isPassword = passwordInput.type === "password";
+
+      passwordInput.type = isPassword ? "text" : "password";
+      togglePassword.textContent = isPassword ? "HIDE" : "SHOW";
+    });
+
+    // Login validation
+    loginForm.addEventListener("submit", function (event) {
+      event.preventDefault();
+
+      const username = document.getElementById("username").value.trim();
+      const password = passwordInput.value;
+
+      loginStatus.className = "login-status";
+
+      if (!username || !password) {
+        loginStatus.textContent = "Please complete both fields.";
+        return;
+      }
+
+      submitButton.disabled = true;
+      submitButton.textContent = "VERIFYING...";
+
+      // DEMO ONLY: credentials are visible in the browser source.
+      const validUsername = "mrnuelgacor";
+      const validPassword = "ictgapernahsalah";
+
+      if (
+        username === validUsername &&
+        password === validPassword
+      ) {
+        loginStatus.classList.add("success");
+        loginStatus.textContent = "Access granted. Welcome!";
+
+        sessionStorage.setItem("wk_logged_in", "true");
+
+        setTimeout(function () {
+          window.location.href = "index.html";
+        }, 650);
+
+      } else {
+        loginStatus.textContent =
+          "Invalid username or password. Please try again.";
+
+        submitButton.disabled = false;
+        submitButton.textContent = "SIGN IN →";
+
+        passwordInput.value = "";
+        passwordInput.focus();
+      }
+    });
+  </script>
+
+</body>
+</html>

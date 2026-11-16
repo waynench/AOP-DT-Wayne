@@ -1,0 +1,372 @@
+
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#481b2a">
+  <link rel="icon" type="image/png" href="logo-laurensia.png">
+
+  <title>OSIS SMP/A LSS | Election 2027</title>
+
+  <link rel="stylesheet" href="style.css">
+  <script src="script.js" defer></script>
+</head>
+
+<body>
+
+  <header class="Wayne-Kenzie-navbar" id="navbar">
+    <div class="Wayne-Kenzie-brand">
+      <div class="Wayne-Kenzie-brand-logos">
+        <img src="logo-osis.png" alt="Logo OSIS">
+        <img src="logo-laurensia.png" alt="Logo Santa Laurensia">
+      </div>
+
+      <div class="Wayne-Kenzie-brand-text">
+        <h1>OSIS SMP/A LSS</h1>
+        <p>SANTA LAURENSIA · SUVARNA SUTERA</p>
+      </div>
+    </div>
+
+    <button
+      class="Wayne-Kenzie-menu-toggle"
+      id="menuToggle"
+      type="button"
+      aria-label="Buka menu"
+    >☰</button>
+
+    <ul class="Wayne-Kenzie-nav-links" id="navLinks">
+      <li><a href="index.html" class="active">Home</a></li>
+      <li><a href="cv1.html">CV 1</a></li>
+      <li><a href="cv2.html">CV 2</a></li>
+    </ul>
+  </header>
+
+  <main>
+
+    <!-- HERO HOME -->
+    <section class="Wayne-Kenzie-home-hero" id="hero">
+
+      <div class="Wayne-Kenzie-hero-content">
+        <div class="Wayne-Kenzie-hero-kicker">OSIS Election 2027</div>
+
+        <h2>Elevate The<br><span>Legacy.</span></h2>
+
+        <p>
+          A new chapter of leadership begins with integrity, purpose,
+          and a commitment to serve the Laurensian community.
+        </p>
+
+        <div class="Wayne-Kenzie-hero-actions">
+          <a href="#election" class="Wayne-Kenzie-button">
+            Explore the Election
+          </a>
+
+          <a
+            href="cv1.html"
+            class="Wayne-Kenzie-button Wayne-Kenzie-button-outline"
+          >
+            Meet the Candidates
+          </a>
+        </div>
+      </div>
+
+      <div class="Wayne-Kenzie-hero-bottom">
+        <span id="heroCounter">01 / 02</span>
+
+        <div class="Wayne-Kenzie-hero-controls">
+          <button
+            class="Wayne-Kenzie-hero-btn"
+            id="prevHero"
+            type="button"
+            aria-label="Foto sebelumnya"
+          >‹</button>
+
+          <button
+            class="Wayne-Kenzie-hero-btn"
+            id="nextHero"
+            type="button"
+            aria-label="Foto berikutnya"
+          >›</button>
+        </div>
+      </div>
+
+    </section>
+
+
+    <!-- INTRODUCTION STRIP -->
+    <section class="Wayne-Kenzie-intro-strip">
+
+      <div class="Wayne-Kenzie-intro-item">
+        <span>VII</span>
+        <p>OSIS GENERATION</p>
+      </div>
+
+      <div class="Wayne-Kenzie-intro-item">
+        <span>2027</span>
+        <p>STUDENT LEADERSHIP ELECTION</p>
+      </div>
+
+      <div class="Wayne-Kenzie-intro-item">
+        <span>LSS</span>
+        <p>ONE LAURENSIAN COMMUNITY</p>
+      </div>
+
+    </section>
+
+
+    <!-- ABOUT SCHOOL -->
+    <section class="Wayne-Kenzie-about-section">
+
+      <div class="Wayne-Kenzie-container Wayne-Kenzie-about-grid">
+
+        <div class="Wayne-Kenzie-about-image">
+          <img
+            src="sekolah.png"
+            alt="Lingkungan Santa Laurensia Suvarna Sutera"
+          >
+        </div>
+
+        <div class="Wayne-Kenzie-about-copy">
+
+          <p class="Wayne-Kenzie-eyebrow">A COMMUNITY TO GROW</p>
+
+          <h2 class="Wayne-Kenzie-section-title">
+            A Place to Learn. A Place to Lead.
+          </h2>
+
+          <p class="Wayne-Kenzie-section-description">
+            Santa Laurensia Suvarna Sutera is a community where students
+            develop their potential, discover their interests, and learn
+            to contribute to the people around them.
+          </p>
+
+          <p class="Wayne-Kenzie-section-description">
+            Through student leadership, OSIS encourages students to take
+            initiative, work together, and create meaningful experiences
+            for the school community.
+          </p>
+
+          <a href="cv1.html" class="Wayne-Kenzie-button">
+            Discover the Candidates
+          </a>
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+    <!-- ELECTION / LIVE VOTE -->
+    <section class="Wayne-Kenzie-election-section" id="election">
+
+      <div class="Wayne-Kenzie-container">
+
+        <div class="Wayne-Kenzie-election-heading">
+
+          <p class="Wayne-Kenzie-eyebrow">Your Voice Matters</p>
+
+          <h2 class="Wayne-Kenzie-section-title">
+            Awaiting Future Leaders
+          </h2>
+
+          <p class="Wayne-Kenzie-section-description">
+            Get to know the candidates and follow the live vote count
+            for the OSIS Election 2027.
+          </p>
+
+        </div>
+
+
+        <!-- LIVE VOTE PANEL -->
+        <section
+          class="Wayne-Kenzie-vote-panel"
+          aria-labelledby="voteTitle"
+        >
+
+          <div class="Wayne-Kenzie-vote-top">
+
+            <div>
+              <p class="Wayne-Kenzie-eyebrow">The People's Choice</p>
+              <h3 id="voteTitle">Live Vote Count</h3>
+            </div>
+
+          </div>
+
+
+          <!-- PIE CHART LAYOUT -->
+          <div class="Wayne-Kenzie-pie-layout">
+
+
+            <!-- PASLON 01 -->
+            <article
+              class="Wayne-Kenzie-pie-candidate Wayne-Kenzie-pie-candidate--one"
+              id="card1"
+            >
+
+              <div class="Wayne-Kenzie-pie-photo">
+                <img src="paslon1.png" alt="Foto Paslon 01">
+              </div>
+
+              <span class="Wayne-Kenzie-pie-tag">
+                CANDIDATE 01
+              </span>
+
+              <h4>Wayne & Hershel</h4>
+
+              <p class="Wayne-Kenzie-pie-votes" id="vote1">0</p>
+
+              <span class="Wayne-Kenzie-pie-percent" id="percent1">
+                0%
+              </span>
+
+              <span class="Wayne-Kenzie-pie-leading">
+                CURRENTLY LEADING
+              </span>
+
+            </article>
+
+
+            <!-- PIE CHART -->
+            <div class="Wayne-Kenzie-pie-center">
+
+              <div
+                class="Wayne-Kenzie-pie-chart"
+                id="votePieChart"
+                role="img"
+                aria-label="Perbandingan suara kedua kandidat"
+              >
+
+                <div class="Wayne-Kenzie-pie-hole">
+
+                  <span class="Wayne-Kenzie-pie-total-label">
+                    TOTAL VOTES
+                  </span>
+
+                  <strong id="totalVotes">0</strong>
+
+                  <span class="Wayne-Kenzie-pie-total-caption">
+                    Laurensian Voices
+                  </span>
+
+                </div>
+
+              </div>
+
+
+              <!-- PIE LEGEND -->
+              <div class="Wayne-Kenzie-pie-legend">
+
+                <span>
+                  <i class="Wayne-Kenzie-legend-one"></i>
+                  Paslon 01
+                </span>
+
+                <span>
+                  <i class="Wayne-Kenzie-legend-two"></i>
+                  Paslon 02
+                </span>
+
+              </div>
+
+            </div>
+
+
+            <!-- PASLON 02 -->
+            <article
+              class="Wayne-Kenzie-pie-candidate Wayne-Kenzie-pie-candidate--two"
+              id="card2"
+            >
+
+              <div class="Wayne-Kenzie-pie-photo">
+                <img src="paslon2.png" alt="Foto Paslon 02">
+              </div>
+
+              <span class="Wayne-Kenzie-pie-tag">
+                CANDIDATE 02
+              </span>
+
+              <h4>Alycia & Victoria</h4>
+
+              <p class="Wayne-Kenzie-pie-votes" id="vote2">0</p>
+
+              <span class="Wayne-Kenzie-pie-percent" id="percent2">
+                0%
+              </span>
+
+              <span class="Wayne-Kenzie-pie-leading">
+                CURRENTLY LEADING
+              </span>
+
+            </article>
+
+          </div>
+
+
+          <!-- VOTE STATUS -->
+          <p class="Wayne-Kenzie-vote-status" id="voteStatus">
+            Connecting to voting data...
+          </p>
+
+
+          <!-- VOTE BUTTON -->
+          <div class="Wayne-Kenzie-vote-action">
+
+            <a
+              href="https://docs.google.com/forms/d/e/1FAIpQLSe_Ch1lZkJB1zdsfWhiek91MG5xdMBhP8NeqCwgaK0pTLKHHg/viewform?usp=dialog"
+              class="Wayne-Kenzie-button"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              Cast Your Vote
+            </a>
+
+          </div>
+
+        </section>
+
+      </div>
+
+    </section>
+
+
+    <!-- SCHOOL PHOTO BANNER -->
+    <section class="Wayne-Kenzie-school-banner">
+
+      <div class="Wayne-Kenzie-school-banner-content">
+
+        <p class="Wayne-Kenzie-eyebrow">
+          The Laurensian Spirit
+        </p>
+
+        <h2>
+          One Community.<br>
+          One Shared Future.
+        </h2>
+
+        <p>
+          Leadership begins with the willingness to listen, understand,
+          and make a positive contribution to the community.
+        </p>
+
+      </div>
+
+    </section>
+
+  </main>
+
+
+  <!-- FOOTER -->
+  <footer class="Wayne-Kenzie-footer">
+
+    <strong>OSIS SMP/A LSS</strong>
+
+    <p>
+      © 2026 OSIS SMP/A Santa Laurensia. All Rights Reserved.
+    </p>
+
+  </footer>
+
+</body>
+</html>
